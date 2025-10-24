@@ -284,11 +284,11 @@ class ProjectSfb:
             2: self.Verde_escuro # Alta inflamabilidade
         }
 
-        # Criar pasta frames se não existir
-        if not os.path.exists("frames"):
-            os.makedirs("frames")
+        ## Criar pasta frames se não existir
+        #if not os.path.exists("frames"):
+           # os.makedirs("frames")
 
-        last_saved_gen = -1  # inicializa contador
+        #last_saved_gen = -1  # inicializa contador
 
         while running:
             clock.tick(60)
@@ -309,9 +309,9 @@ class ProjectSfb:
                 veg_colors=veg_colors, surface=surface1, pause=pause
             )
 
-            if grid.geracao != last_saved_gen:
-                pygame.image.save(surface1, os.path.join("frames", f"grid_{grid.geracao}.png"))
-                last_saved_gen = grid.geracao
+            #if grid.geracao != last_saved_gen:
+                #pygame.image.save(surface1, os.path.join("frames", f"grid_{grid.geracao}.png"))
+                #last_saved_gen = grid.geracao
 
             x_points = grid.t_series
             y_points = [grid.s_series, grid.i_series, grid.r_series]
